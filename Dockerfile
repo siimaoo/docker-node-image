@@ -10,7 +10,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update
 RUN apt-get install -y \
     curl \
-    rsync \
+    rsync 
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
