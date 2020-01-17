@@ -9,10 +9,25 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update
 RUN apt-get install -y \
+    sudo \
+    autoconf \
+    autogen \
+    language-pack-en-base \
+    wget \
+    zip \
+    unzip \
     curl \
     rsync \
-    zip \
-    unzip 
+    ssh \
+    openssh-client \
+    git \
+    build-essential \
+    apt-utils \
+    software-properties-common \
+    nasm \
+    libjpeg-dev \
+    libpng-dev \
+    libpng16-16
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
